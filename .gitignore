@@ -1,0 +1,8 @@
+*.tmp
+.netrwhist*
+spell/
+swp/
+view/
+viminfo
+colorscheme
+.backup.log
