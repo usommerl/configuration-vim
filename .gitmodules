@@ -21,10 +21,10 @@
 	url = https://github.com/tomasr/molokai.git
 [submodule "bundle/colorscheme-base16"]
 	path = bundle/colorscheme-base16
-	url = git://github.com/chriskempson/base16-vim.git
+	url = https://github.com/chriskempson/base16-vim.git
 [submodule "bundle/colorscheme-solarized"]
 	path = bundle/colorscheme-solarized
-	url = git://github.com/altercation/vim-colors-solarized.git
+	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "bundle/dart-vim-plugin"]
 	path = bundle/dart-vim-plugin
 	url = https://github.com/dart-lang/dart-vim-plugin.git
