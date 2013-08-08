@@ -144,8 +144,16 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 "mute highlighting
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
-""" reads colorscheme setting from external file
-let file=expand("~/.vim/colorscheme") | if filereadable(file) | exe "source " .file | endif
+""" colors
+let file=expand("~/.vim/colorscheme")
+if filereadable(file)
+   " read colorscheme setting from external file if it exists
+   exe "source " . file
+else
+   " default colorscheme
+   colorscheme lucius
+   LuciusDark
+endif
 
 """ statusline
 set statusline=[%n]\                             " buffer number
