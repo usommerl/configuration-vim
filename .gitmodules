@@ -38,3 +38,6 @@
 [submodule "bundle/colorscheme-seoul256"]
 	path = bundle/colorscheme-seoul256
 	url = https://github.com/junegunn/seoul256.vim.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
