@@ -37,9 +37,8 @@ set wildmenu
 set showcmd
 set complete=.,w,b,u,U,t,i,d,k
 set dictionary=/usr/share/dict/ngerman,/usr/share/dict/british-english 
-set listchars=tab:>-,eol:$,nbsp:%
-"set pdev=pdf
-"set printoptions=paper:A4,syntax:y,wrap:y,duplex:long
+set listchars=tab:▸\ ,eol:$,nbsp:%
+set cursorline
 
 """ custom functions
 function! MyFoldText()
@@ -79,6 +78,7 @@ endfunction
 let mapleader = ","
 
 "when using vim as mergetool
+map <silent> <leader>1 :diffget 1<CR> :diffupdate<CR>
 map <silent> <leader>2 :diffget 2<CR> :diffupdate<CR>
 map <silent> <leader>3 :diffget 3<CR> :diffupdate<CR>
 map <silent> <leader>4 :diffget 4<CR> :diffupdate<CR>
@@ -116,6 +116,29 @@ imap <F4> :call ToggleList("Quickfix List", 'c')<cr>
 "tab in insert mode
 imap <S-Tab> 
 
+"capitalize text (source: http://goo.gl/Grhx9f)
+if (&tildeop)
+  nmap gcw guw~l
+  nmap gcW guW~l
+  nmap gciw guiw~l
+  nmap gciW guiW~l
+  nmap gcis guis~l
+  nmap gc$ gu$~l
+  nmap gcgc guu~l
+  nmap gcc guu~l
+  vmap gc gu~l
+else
+  nmap gcw guw~h
+  nmap gcW guW~h
+  nmap gciw guiw~h
+  nmap gciW guiW~h
+  nmap gcis guis~h
+  nmap gc$ gu$~h
+  nmap gcgc guu~h
+  nmap gcc guu~h
+  vmap gc gu~h
+endif
+
 "update buffer
 map <F5> :update<cr>
 imap <F5> <c-o>:update<cr>
@@ -128,6 +151,9 @@ imap <F12> <c-o>:q<cr>
 map <F8> :BufExplorer<cr>
 imap <F8> <Esc>:BufExplorer<cr>
 vmap <F8> :BufExplorer<cr>
+
+"toggle display of non-visible characters
+nnoremap <leader>l :set list!<CR>
 
 "map keys to copy lines
 "TODO do i need this anymore?
@@ -172,6 +198,3 @@ au! Filetype tex,asciidoc,sh set foldmethod=manual
 au! BufReadCmd *.odt,*.ott,*.ods,*.ots,*.odp,*.otp,*.odg,*.otg call zip#Browse(expand("<amatch>"))
 au! BufWinLeave *.* mkview
 au! BufWinEnter *.* silent loadview 
-
-
-
