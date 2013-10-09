@@ -1,6 +1,7 @@
 """ plugins
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
+Helptags " generate vim help for plugins
 filetype plugin on
 filetype indent on
 syntax on
@@ -11,6 +12,7 @@ runtime macros/matchit.vim
 set nocompatible
 set spelllang=de             " spell language
 set dir=~/.vim/swp           " unified location of swap files
+set undodir=~/.vim/undo
 set viminfo+=n~/.vim/viminfo " location of the viminfo file
 set ignorecase
 set smartcase
