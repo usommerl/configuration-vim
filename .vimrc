@@ -141,19 +141,6 @@ else
   vmap gc gu~h
 endif
 
-"update buffer
-map <F5> :update<cr>
-imap <F5> <c-o>:update<cr>
-
-"quit
-map <F12> :q<cr>
-imap <F12> <c-o>:q<cr>
-
-"bufexplorer
-map <F8> :BufExplorer<cr>
-imap <F8> <Esc>:BufExplorer<cr>
-vmap <F8> :BufExplorer<cr>
-
 "toggle display of non-visible characters
 nnoremap <leader>l :set list!<CR>
 
