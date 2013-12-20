@@ -155,6 +155,8 @@ vmap <S-M-Down> <Esc>:'<,'>copy'><cr>
 
 "easy expansion of the active file directory
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+"always map E command to Explore
+command! -nargs=* -bar -bang -count=0 -complete=dir E Explore <args>
 
 "mute highlighting
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
