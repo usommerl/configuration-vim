@@ -192,5 +192,5 @@ set statusline+=[%p%%]                           " percentage
 au! bufwritepost .vimrc source ~/.vimrc
 au! Filetype tex,asciidoc,sh set foldmethod=manual
 au! BufReadCmd *.odt,*.ott,*.ods,*.ots,*.odp,*.otp,*.odg,*.otg call zip#Browse(expand("<amatch>"))
-au! BufWinLeave *.* mkview
+au! BufWinLeave *.* setlocal backupcopy=auto|mkview
 au! BufWinEnter *.* silent loadview 
