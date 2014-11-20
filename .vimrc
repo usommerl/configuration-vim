@@ -55,8 +55,8 @@ set cursorline
 " {{{ Functions
 function! MyFoldText()
     let line = getline(v:foldstart)
-    let sub = substitute(line, '/\*\|\*/\|{\{3}\d\=', '', 'g')
-    return v:folddashes . sub
+    let sub = substitute(line, '.*{\{3}\s*', ' ', 'g')
+    return v:folddashes . sub . ' '
 endfunction
 
 function! GetBufferList()
@@ -198,8 +198,8 @@ set statusline+=[%p%%]                           " percentage
 " }}}
 
 " {{{ Autocommands
-au! bufwritepost .vimrc source ~/.vimrc
-au! Filetype tex,asciidoc,sh set foldmethod=manual
+au! BufWritePost .vimrc source ~/.vimrc | setlocal foldmethod=marker
+au! Filetype tex,asciidoc,sh setlocal foldmethod=manual
 au! BufReadCmd *.odt,*.ott,*.ods,*.ots,*.odp,*.otp,*.odg,*.otg call zip#Browse(expand("<amatch>"))
 au! BufWinLeave *.* setlocal backupcopy=auto|mkview
 au! BufWinEnter *.* silent loadview 
