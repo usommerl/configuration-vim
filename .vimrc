@@ -1,4 +1,4 @@
-""" plugins
+" {{{ Plugins
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 Helptags " generate vim help for plugins
@@ -8,12 +8,13 @@ syntax on
 
 runtime macros/matchit.vim
 
-"""Syntastic
+" Syntastic
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': [],
                            \ 'passive_filetypes': ['scala'] }
+" }}}
 
-""" options
+" {{{ General options
 set nocompatible
 set spelllang=de             " spell language
 set dir=~/.vim/swp           " unified location of swap files
@@ -49,11 +50,12 @@ set complete=.,w,b,u,U,t,i,d,k
 set dictionary=/usr/share/dict/ngerman,/usr/share/dict/british-english 
 set listchars=tab:▸\ ,eol:$,nbsp:%
 set cursorline
+" }}}
 
-""" custom functions
+" {{{ Functions
 function! MyFoldText()
     let line = getline(v:foldstart)
-    let sub = substitute(line, '/\*\|\*/\|{{{\d\=', '', 'g')
+    let sub = substitute(line, '/\*\|\*/\|{\{3}\d\=', '', 'g')
     return v:folddashes . sub
 endfunction
 
@@ -83,8 +85,9 @@ function! ToggleList(bufname, pfx)
     wincmd p
   endif
 endfunction
+" }}}
 
-""" keys
+" {{{ Keys
 let mapleader = ","
 
 "when using vim as mergetool
@@ -168,8 +171,9 @@ command! -nargs=* -bar -bang -count=0 -complete=dir E Explore <args>
 
 "mute highlighting
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+" }}}
 
-""" colors
+" {{{ Colors
 let file=expand("~/.vim/colorscheme")
 if filereadable(file)
    " read colorscheme setting from external file if it exists
@@ -179,8 +183,9 @@ else
    colorscheme lucius
    LuciusDark
 endif
+" }}}
 
-""" statusline
+" {{{ Statusline
 set statusline=[%n]\                             " buffer number
 set statusline+=%<                               " truncate from here if line is too long
 set statusline+=%F                               " filename
@@ -190,10 +195,12 @@ set statusline+=[%{strlen(&fenc)?&fenc:&enc}]\   " encoding
 set statusline+=%{strlen(&ft)?'['.&ft.']\ ':''}  " filetype
 set statusline+=[%l,%v]\                         " position in file [line,column]
 set statusline+=[%p%%]                           " percentage
+" }}}
 
-""" autocommands
+" {{{ Autocommands
 au! bufwritepost .vimrc source ~/.vimrc
 au! Filetype tex,asciidoc,sh set foldmethod=manual
 au! BufReadCmd *.odt,*.ott,*.ods,*.ots,*.odp,*.otp,*.odg,*.otg call zip#Browse(expand("<amatch>"))
 au! BufWinLeave *.* setlocal backupcopy=auto|mkview
 au! BufWinEnter *.* silent loadview 
+" }}}
