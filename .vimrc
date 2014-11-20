@@ -16,18 +16,18 @@ let g:syntastic_mode_map = { 'mode': 'active',
 
 " {{{ General options
 set nocompatible
-set spelllang=de             " spell language
+set spelllang=de
 set dir=~/.vim/swp           " unified location of swap files
 set undofile
 set undodir=~/.vim/undo
 set undolevels=1000
 set undoreload=10000
-set viminfo+=n~/.vim/viminfo " location of the viminfo file
+set history=1000
+set viminfo+=n~/.vim/viminfo
 set ignorecase
 set smartcase
 set hidden
 set t_Co=256
-set history=1000
 set autoread
 set linebreak
 set backspace=2
