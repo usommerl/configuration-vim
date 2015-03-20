@@ -117,8 +117,6 @@ nnoremap k gk
 "map keys to move lines
 noremap <C-j> :m+<cr>==
 noremap <C-k> :m-2<cr>==
-inoremap <C-j> <Esc>:m+<cr>==gi
-inoremap <C-k> <Esc>:m-2<cr>==gi
 vnoremap <C-j> :m'>+<CR>gv=gv
 vnoremap <C-k> :m-2<CR>gv=gv
 
