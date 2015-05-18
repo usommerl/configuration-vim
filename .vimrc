@@ -15,6 +15,7 @@ let g:syntastic_mode_map = { 'mode': 'active',
 " }}}
 
 " {{{ General options
+set encoding=utf-8
 set nocompatible
 set spelllang=de
 set dir=~/.vim/swp           " unified location of swap files
