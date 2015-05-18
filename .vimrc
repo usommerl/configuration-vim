@@ -51,7 +51,6 @@ set complete=.,w,b,u,U,t,i,d,k
 set dictionary=/usr/share/dict/ngerman,/usr/share/dict/british-english 
 set listchars=tab:▸\ ,eol:$,nbsp:%
 set cursorline
-let &colorcolumn=join(range(81,999),",")
 " }}}
 
 " {{{ Functions
@@ -203,4 +202,7 @@ au! Filetype tex,asciidoc,sh setlocal foldmethod=manual
 au! BufReadCmd *.odt,*.ott,*.ods,*.ots,*.odp,*.otp,*.odg,*.otg call zip#Browse(expand("<amatch>"))
 au! BufWinLeave *.* setlocal backupcopy=auto|mkview
 au! BufWinEnter *.* silent loadview 
+au! Filetype ruby
+            \ let &l:colorcolumn=join(range(81,999),",") |
+            \ setlocal regexpengine=1 ts=2 sw=2 sts=2 expandtab
 " }}}
