@@ -21,6 +21,14 @@ let g:unite_source_history_yank_enable = 1
 let g:unite_split_rule = "botright"
 " Use the fuzzy matcher for everything
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
+" Grep
+if executable('ack')
+  let g:unite_source_grep_command = 'ack'
+elseif executable('ack-grep')
+  let g:unite_source_grep_command = 'ack-grep'
+endif
+let g:unite_source_grep_recursive_opt = ''
+let g:unite_source_grep_default_opts = '--no-heading --no-color'
 " }}}
 
 " }}}
@@ -186,6 +194,9 @@ nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 nnoremap <silent> <leader>o :<C-u>Unite -buffer-name=outline -vertical outline<cr>
 nnoremap <silent> <leader>b :<C-u>Unite -buffer-name=buffers buffer<cr>
 nnoremap <silent> <leader>y :<C-u>Unite -buffer-name=yanks history/yank<cr>
+nnoremap <silent> <leader>g :<C-u>Unite -buffer-name=grep grep<cr>
+nnoremap <silent> <leader>rg :<C-u>UniteResume grep<cr>
+nnoremap <leader>ugo :<C-u>Unite -buffer-name=grep grep:.:
 " }}}
 
 " {{{ Colors
