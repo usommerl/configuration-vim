@@ -8,10 +8,21 @@ syntax on
 
 runtime macros/matchit.vim
 
-" Syntastic
+" {{{ Syntastic
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': [],
                            \ 'passive_filetypes': ['scala'] }
+" }}}
+
+" {{{ Unite
+" Enable history yank source
+let g:unite_source_history_yank_enable = 1
+" Open in bottom right
+let g:unite_split_rule = "botright"
+" Use the fuzzy matcher for everything
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+" }}}
+
 " }}}
 
 " {{{ General options
@@ -172,8 +183,9 @@ command! -nargs=* -bar -bang -count=0 -complete=dir E Explore <args>
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 " unite keys
-nnoremap <silent> <leader>o :Unite -buffer-name=outline -vertical -direction=dynamicbottom outline<cr>
-nnoremap <silent> <leader>b :Unite -buffer-name=buffers -direction=dynamicbottom buffer<cr>
+nnoremap <silent> <leader>o :<C-u>Unite -buffer-name=outline -vertical outline<cr>
+nnoremap <silent> <leader>b :<C-u>Unite -buffer-name=buffers buffer<cr>
+nnoremap <silent> <leader>y :<C-u>Unite -buffer-name=yanks history/yank<cr>
 " }}}
 
 " {{{ Colors
