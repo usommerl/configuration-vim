@@ -170,6 +170,10 @@ command! -nargs=* -bar -bang -count=0 -complete=dir E Explore <args>
 
 "mute highlighting
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+
+" unite keys
+nnoremap <silent> <leader>o :Unite -buffer-name=outline -vertical -direction=dynamicbottom outline<cr>
+nnoremap <silent> <leader>b :Unite -buffer-name=buffers -direction=dynamicbottom buffer<cr>
 " }}}
 
 " {{{ Colors
