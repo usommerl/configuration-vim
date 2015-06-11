@@ -190,11 +190,15 @@ command! -nargs=* -bar -bang -count=0 -complete=dir E Explore <args>
 "mute highlighting
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
+"yank file or directory name
+nnoremap <silent> <leader>yf :<C-u>let @+ = expand("%:p") <cr>
+nnoremap <silent> <leader>yd :<C-u>let @+ = expand("%:p:h")<cr>
+
 " unite keys
 nnoremap <silent> <leader>o :<C-u>Unite -buffer-name=outline -vertical outline<cr>
 nnoremap <silent> <leader>b :<C-u>Unite -buffer-name=buffers buffer<cr>
-nnoremap <silent> <leader>y :<C-u>Unite -buffer-name=yanks history/yank<cr>
 nnoremap <silent> <leader>g :<C-u>Unite -buffer-name=grep grep<cr>
+nnoremap <silent> <leader>yh :<C-u>Unite -buffer-name=yanks history/yank<cr>
 nnoremap <silent> <leader>rg :<C-u>UniteResume grep<cr>
 nnoremap <leader>ugo :<C-u>Unite -buffer-name=grep grep:.:
 " }}}
