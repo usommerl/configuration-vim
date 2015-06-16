@@ -29,6 +29,8 @@ elseif executable('ack-grep')
 endif
 let g:unite_source_grep_recursive_opt = ''
 let g:unite_source_grep_default_opts = '--no-heading --no-color'
+
+let g:unite_source_session_enable_auto_save = 1
 " }}}
 
 " }}}
@@ -200,6 +202,10 @@ nnoremap <silent> <leader>b :<C-u>Unite -buffer-name=buffers buffer<cr>
 nnoremap <silent> <leader>g :<C-u>Unite -buffer-name=grep grep<cr>
 nnoremap <silent> <leader>yh :<C-u>Unite -buffer-name=yanks history/yank<cr>
 nnoremap <silent> <leader>rg :<C-u>UniteResume grep<cr>
+nnoremap <silent> <leader>so :<C-u>Unite -buffer-name=sessions session<cr>
+nnoremap <silent> <leader>ss :<C-u>UniteSessionSave<cr>
+nnoremap <silent> <leader>sn :<C-u>Unite -buffer-name=sessions -start-insert session/new<cr>
+nnoremap <silent> <leader>sc :<C-u>echo v:this_session<cr>
 nnoremap <leader>ugo :<C-u>Unite -buffer-name=grep grep:.:
 " }}}
 
