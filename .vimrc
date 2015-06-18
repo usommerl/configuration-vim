@@ -241,5 +241,5 @@ au! BufWinLeave *.* setlocal backupcopy=auto|mkview
 au! BufWinEnter *.* silent loadview 
 au! Filetype ruby
             \ let &l:colorcolumn=join(range(81,999),",") |
-            \ setlocal regexpengine=1 ts=2 sw=2 sts=2 expandtab
+            \ setlocal regexpengine=1 foldmethod=manual ts=2 sw=2 sts=2 expandtab
 " }}}
