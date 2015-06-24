@@ -8,13 +8,38 @@ syntax on
 
 runtime macros/matchit.vim
 
-" Syntastic
+" {{{ Syntastic
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': [],
                            \ 'passive_filetypes': ['scala'] }
 " }}}
 
+" {{{ Unite
+" Enable history yank source
+let g:unite_source_history_yank_enable = 1
+" Open in bottom right
+let g:unite_split_rule = "botright"
+" Use the fuzzy matcher for everything
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+" Grep
+if executable('ack')
+  let g:unite_source_grep_command = 'ack'
+elseif executable('ack-grep')
+  let g:unite_source_grep_command = 'ack-grep'
+endif
+let g:unite_source_grep_recursive_opt = ''
+let g:unite_source_grep_default_opts = '--no-heading --no-color'
+
+let g:unite_source_session_enable_auto_save = 1
+
+call unite#custom#source('buffer', 'sorters', 'sorter_word')
+call unite#custom#source('session', 'sorters', 'sorter_word')
+" }}}
+
+" }}}
+
 " {{{ General options
+set encoding=utf-8
 set nocompatible
 set spelllang=de
 set dir=~/.vim/swp           " unified location of swap files
@@ -50,7 +75,6 @@ set complete=.,w,b,u,U,t,i,d,k
 set dictionary=/usr/share/dict/ngerman,/usr/share/dict/british-english 
 set listchars=tab:▸\ ,eol:$,nbsp:%
 set cursorline
-let &colorcolumn=join(range(81,999),",")
 " }}}
 
 " {{{ Functions
@@ -170,6 +194,22 @@ command! -nargs=* -bar -bang -count=0 -complete=dir E Explore <args>
 
 "mute highlighting
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+
+"yank file or directory name
+nnoremap <silent> <leader>yf :<C-u>let @+ = expand("%:p") <cr>
+nnoremap <silent> <leader>yd :<C-u>let @+ = expand("%:p:h")<cr>
+
+" unite keys
+nnoremap <silent> <leader>o :<C-u>Unite -buffer-name=outline -vertical outline<cr>
+nnoremap <silent> <leader>b :<C-u>Unite -buffer-name=buffers buffer<cr>
+nnoremap <silent> <leader>g :<C-u>Unite -buffer-name=grep grep<cr>
+nnoremap <silent> <leader>yh :<C-u>Unite -buffer-name=yanks history/yank<cr>
+nnoremap <silent> <leader>rg :<C-u>UniteResume grep<cr>
+nnoremap <silent> <leader>so :<C-u>Unite -buffer-name=sessions session<cr>
+nnoremap <silent> <leader>ss :<C-u>UniteSessionSave<cr>
+nnoremap <silent> <leader>sn :<C-u>Unite -buffer-name=sessions -start-insert session/new<cr>
+nnoremap <silent> <leader>sc :<C-u>echo v:this_session<cr>
+nnoremap <leader>ugo :<C-u>Unite -buffer-name=grep grep:.:
 " }}}
 
 " {{{ Colors
@@ -202,4 +242,7 @@ au! Filetype tex,asciidoc,sh setlocal foldmethod=manual
 au! BufReadCmd *.odt,*.ott,*.ods,*.ots,*.odp,*.otp,*.odg,*.otg call zip#Browse(expand("<amatch>"))
 au! BufWinLeave *.* setlocal backupcopy=auto|mkview
 au! BufWinEnter *.* silent loadview 
+au! Filetype ruby
+            \ let &l:colorcolumn=join(range(81,999),",") |
+            \ setlocal regexpengine=1 foldmethod=manual ts=2 sw=2 sts=2 expandtab
 " }}}
