@@ -31,6 +31,9 @@ let g:unite_source_grep_recursive_opt = ''
 let g:unite_source_grep_default_opts = '--no-heading --no-color'
 
 let g:unite_source_session_enable_auto_save = 1
+
+call unite#custom#source('buffer', 'sorters', 'sorter_word')
+call unite#custom#source('session', 'sorters', 'sorter_word')
 " }}}
 
 " }}}
