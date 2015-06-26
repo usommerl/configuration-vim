@@ -34,6 +34,7 @@ let g:unite_source_session_enable_auto_save = 1
 
 call unite#custom#source('buffer', 'sorters', 'sorter_word')
 call unite#custom#source('session', 'sorters', 'sorter_word')
+call unite#custom#source('find', 'max_candidates', 0)
 " }}}
 
 " }}}
@@ -203,6 +204,7 @@ nnoremap <silent> <leader>yd :<C-u>let @+ = expand("%:p:h")<cr>
 nnoremap <silent> <leader>o :<C-u>Unite -buffer-name=outline -vertical outline<cr>
 nnoremap <silent> <leader>b :<C-u>Unite -buffer-name=buffers buffer<cr>
 nnoremap <silent> <leader>g :<C-u>Unite -buffer-name=grep grep<cr>
+nnoremap <silent> <leader>f :<C-u>Unite -buffer-name=find find<cr>
 nnoremap <silent> <leader>yh :<C-u>Unite -buffer-name=yanks history/yank<cr>
 nnoremap <silent> <leader>rg :<C-u>UniteResume grep<cr>
 nnoremap <silent> <leader>so :<C-u>Unite -buffer-name=sessions session<cr>
