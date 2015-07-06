@@ -73,6 +73,8 @@ set complete=.,w,b,u,U,t,i,d,k
 set dictionary=/usr/share/dict/ngerman,/usr/share/dict/british-english 
 set listchars=tab:▸\ ,eol:$,nbsp:%
 set cursorline
+
+let g:xml_syntax_folding=1
 " }}}
 
 " {{{ Functions
