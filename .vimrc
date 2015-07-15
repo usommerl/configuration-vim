@@ -65,7 +65,7 @@ set shiftwidth=4
 set autoindent
 set hlsearch
 set incsearch
-set foldcolumn=1
+set foldcolumn=2
 set foldtext=MyFoldText()
 set foldmethod=syntax
 set foldlevelstart=99
