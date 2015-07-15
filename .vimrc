@@ -55,6 +55,7 @@ set t_Co=256
 set autoread
 set linebreak
 set backspace=2
+set relativenumber
 set number
 set laststatus=2
 set expandtab
