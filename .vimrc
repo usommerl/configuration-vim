@@ -254,4 +254,6 @@ au! BufWinEnter *.* silent loadview
 au! Filetype ruby
             \ let &l:colorcolumn=join(range(81,999),",") |
             \ setlocal regexpengine=1 foldmethod=manual ts=2 sw=2 sts=2 expandtab
+au! Filetype java
+            \ let &l:colorcolumn=join(range(81,999),",")
 " }}}
