@@ -202,6 +202,10 @@ nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 nnoremap <silent> <leader>yf :<C-u>let @+ = expand("%:p") <cr>
 nnoremap <silent> <leader>yd :<C-u>let @+ = expand("%:p:h")<cr>
 
+" remove extra whitespace
+nnoremap <leader>r<space> :%s/\s\+$/<cr>
+vnoremap <leader>r<space> :s/\s\+$/<cr>
+
 " unite keys
 nnoremap <silent> <leader>o :<C-u>Unite -buffer-name=outline -vertical outline<cr>
 nnoremap <silent> <leader>b :<C-u>Unite -buffer-name=buffers buffer<cr>
