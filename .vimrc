@@ -206,6 +206,8 @@ nnoremap <silent> <leader>yd :<C-u>let @+ = expand("%:p:h")<cr>
 nnoremap <leader>r<space> :%s/\s\+$/<cr>
 vnoremap <leader>r<space> :s/\s\+$/<cr>
 
+" switch between current and last buffer
+nmap <leader>. :b#<cr>
 " unite keys
 nnoremap <silent> <leader>o :<C-u>Unite -buffer-name=outline -vertical outline<cr>
 nnoremap <silent> <leader>b :<C-u>Unite -buffer-name=buffers buffer<cr>
