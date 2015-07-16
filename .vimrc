@@ -208,6 +208,10 @@ vnoremap <leader>r<space> :s/\s\+$/<cr>
 
 " switch between current and last buffer
 nmap <leader>. :b#<cr>
+
+" scroll the viewport faster
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
 " unite keys
 nnoremap <silent> <leader>o :<C-u>Unite -buffer-name=outline -vertical outline<cr>
 nnoremap <silent> <leader>b :<C-u>Unite -buffer-name=buffers buffer<cr>
