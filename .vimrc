@@ -217,6 +217,7 @@ nnoremap <silent> <leader>o :<C-u>Unite -buffer-name=outline -vertical outline<c
 nnoremap <silent> <leader>b :<C-u>Unite -buffer-name=buffers buffer<cr>
 nnoremap <silent> <leader>g :<C-u>Unite -buffer-name=grep grep<cr>
 nnoremap <silent> <leader>f :<C-u>Unite -buffer-name=find find<cr>
+nnoremap <silent> <leader>rr :<C-u>Unite -buffer-name=register register<cr>
 nnoremap <silent> <leader>yh :<C-u>Unite -buffer-name=yanks history/yank<cr>
 nnoremap <silent> <leader>rg :<C-u>UniteResume grep<cr>
 nnoremap <silent> <leader>rf :<C-u>UniteResume find<cr>
