@@ -220,6 +220,7 @@ nnoremap <silent> <leader>f :<C-u>Unite -buffer-name=find find<cr>
 nnoremap <silent> <leader>yh :<C-u>Unite -buffer-name=yanks history/yank<cr>
 nnoremap <silent> <leader>rg :<C-u>UniteResume grep<cr>
 nnoremap <silent> <leader>rf :<C-u>UniteResume find<cr>
+nnoremap <silent> <leader>rb :<C-u>UniteResume buffers<cr>
 nnoremap <silent> <leader>so :<C-u>Unite -buffer-name=sessions session<cr>
 nnoremap <silent> <leader>ss :<C-u>UniteSessionSave<cr>
 nnoremap <silent> <leader>sn :<C-u>Unite -buffer-name=sessions -start-insert session/new<cr>
