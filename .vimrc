@@ -113,6 +113,12 @@ function! ToggleList(bufname, pfx)
     wincmd p
   endif
 endfunction
+
+function! GitStatus()
+    let l:git_status=substitute(fugitive#statusline(), "Git(", "", "")
+    let l:git_status=substitute(l:git_status, ")", "", "")
+    return l:git_status
+endfunction
 " }}}
 
 " {{{ Keys
@@ -245,6 +251,7 @@ endif
 set statusline=[%n]\                             " buffer number
 set statusline+=%<                               " truncate from here if line is too long
 set statusline+=%F                               " filename
+set statusline+=\ %{GitStatus()}                 " git status
 set statusline+=%m%r%h%w\                        " flags
 set statusline+=%=                               " shove everything from here to the right
 set statusline+=[%{strlen(&fenc)?&fenc:&enc}]\   " encoding
