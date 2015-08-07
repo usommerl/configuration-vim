@@ -220,7 +220,7 @@ nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 " unite keys
 nnoremap <silent> <leader>o :<C-u>Unite -buffer-name=outline -vertical outline<cr>
-nnoremap <silent> <leader>b :<C-u>Unite -buffer-name=buffers buffer<cr>
+nnoremap <silent> <leader>bo :<C-u>Unite -buffer-name=buffers buffer<cr>
 nnoremap <silent> <leader>g :<C-u>Unite -buffer-name=grep grep<cr>
 nnoremap <silent> <leader>f :<C-u>Unite -buffer-name=find find<cr>
 nnoremap <silent> <leader>rr :<C-u>Unite -buffer-name=register register<cr>
