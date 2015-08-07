@@ -31,7 +31,7 @@
 [submodule "bundle/align"]
 	path = bundle/align
 	url = https://github.com/vim-scripts/Align.git
-    ignore = untracked
+	ignore = untracked
 [submodule "configuration-module-lib"]
 	path = configuration-module-lib
 	url = https://github.com/usommerl/configuration-module-lib.git
@@ -62,3 +62,7 @@
 [submodule "bundle/unite-session"]
 	path = bundle/unite-session
 	url = https://github.com/Shougo/unite-session.git
+[submodule "bundle/vim-buffkill"]
+	path = bundle/vim-buffkill
+	url = https://github.com/qpkorr/vim-bufkill.git
+	ignore = untracked
