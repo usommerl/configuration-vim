@@ -229,7 +229,7 @@ nnoremap <silent> <leader>rg :<C-u>UniteResume grep<cr>
 nnoremap <silent> <leader>rf :<C-u>UniteResume find<cr>
 nnoremap <silent> <leader>rb :<C-u>UniteResume buffers<cr>
 nnoremap <silent> <leader>so :<C-u>Unite -buffer-name=sessions session<cr>
-nnoremap <silent> <leader>ss :<C-u>UniteSessionSave<cr>
+nnoremap <silent> <leader>ss :<C-u>UniteSessionSave<cr>:<C-u>echo "Session saved"<cr>
 nnoremap <silent> <leader>sn :<C-u>Unite -buffer-name=sessions -start-insert session/new<cr>
 nnoremap <silent> <leader>sc :<C-u>echo v:this_session<cr>
 nnoremap <leader>ugo :<C-u>Unite -buffer-name=grep grep:.:
