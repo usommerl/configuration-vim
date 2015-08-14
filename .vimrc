@@ -202,37 +202,35 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 command! -nargs=* -bar -bang -count=0 -complete=dir E Explore <args>
 
 "mute highlighting
-nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
-
-"yank file or directory name
-nnoremap <silent> <leader>yf :<C-u>let @+ = expand("%:p") <cr>
-nnoremap <silent> <leader>yd :<C-u>let @+ = expand("%:p:h")<cr>
+nnoremap <silent> <C-l> :<C-u>nohlsearch<cr><C-l>
 
 " remove extra whitespace
 nnoremap <leader>r<space> :%s/\s\+$/<cr>
 vnoremap <leader>r<space> :s/\s\+$/<cr>
 
 " switch between current and last buffer
-nmap <leader>. :b#<cr>
+nnoremap <leader>. :b#<cr>
 
 " scroll the viewport faster
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
-" unite keys
+
 nnoremap <silent> <leader>o :<C-u>Unite -buffer-name=outline -vertical outline<cr>
-nnoremap <silent> <leader>bo :<C-u>Unite -buffer-name=buffers buffer<cr>
-nnoremap <silent> <leader>g :<C-u>Unite -buffer-name=grep grep<cr>
-nnoremap <silent> <leader>f :<C-u>Unite -buffer-name=find find<cr>
+nnoremap <silent> <leader>bb :<C-u>Unite -buffer-name=buffers buffer<cr>
+nnoremap <silent> <leader>br :<C-u>UniteResume buffer<cr>
+nnoremap <silent> <leader>ff :<C-u>Unite -buffer-name=find find<cr>
+nnoremap <silent> <leader>fr :<C-u>UniteResume find<cr>
+nnoremap <silent> <leader>gg :<C-u>Unite -buffer-name=grep grep<cr>
+nnoremap <silent> <leader>gr :<C-u>UniteResume grep<cr>
+nnoremap          <leader>go :<C-u>Unite -buffer-name=grep grep:.:
 nnoremap <silent> <leader>rr :<C-u>Unite -buffer-name=register register<cr>
-nnoremap <silent> <leader>yh :<C-u>Unite -buffer-name=yanks history/yank<cr>
-nnoremap <silent> <leader>rg :<C-u>UniteResume grep<cr>
-nnoremap <silent> <leader>rf :<C-u>UniteResume find<cr>
-nnoremap <silent> <leader>rb :<C-u>UniteResume buffers<cr>
-nnoremap <silent> <leader>so :<C-u>Unite -buffer-name=sessions session<cr>
-nnoremap <silent> <leader>ss :<C-u>UniteSessionSave<cr>:<C-u>echo "Session saved"<cr>
+nnoremap <silent> <leader>ss :<C-u>Unite -buffer-name=sessions session<cr>
+nnoremap <silent> <leader>sw :<C-u>UniteSessionSave<cr>:<C-u>echo "Session saved"<cr>
 nnoremap <silent> <leader>sn :<C-u>Unite -buffer-name=sessions -start-insert session/new<cr>
 nnoremap <silent> <leader>sc :<C-u>echo v:this_session<cr>
-nnoremap <leader>ugo :<C-u>Unite -buffer-name=grep grep:.:
+nnoremap <silent> <leader>yy :<C-u>Unite -buffer-name=yanks history/yank<cr>
+nnoremap <silent> <leader>yd :<C-u>let @+ = expand("%:p:h")<cr>
+nnoremap <silent> <leader>yf :<C-u>let @+ = expand("%:p") <cr>
 " }}}
 
 " {{{ Colors
