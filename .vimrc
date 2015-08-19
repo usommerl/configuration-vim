@@ -218,11 +218,11 @@ nnoremap <C-y> 3<C-y>
 nnoremap <silent> <leader>o :<C-u>Unite -buffer-name=outline -vertical outline<cr>
 nnoremap <silent> <leader>bb :<C-u>Unite -buffer-name=buffers buffer<cr>
 nnoremap <silent> <leader>br :<C-u>UniteResume buffer<cr>
-nnoremap <silent> <leader>ff :<C-u>Unite -buffer-name=find find<cr>
+nnoremap <silent> <leader>ff :<C-u>Unite -buffer-name=find -no-empty find<cr>
 nnoremap <silent> <leader>fr :<C-u>UniteResume find<cr>
-nnoremap <silent> <leader>gg :<C-u>Unite -buffer-name=grep grep<cr>
+nnoremap <silent> <leader>gg :<C-u>Unite -buffer-name=grep -no-empty grep<cr>
 nnoremap <silent> <leader>gr :<C-u>UniteResume grep<cr>
-nnoremap          <leader>go :<C-u>Unite -buffer-name=grep grep:.:
+nnoremap          <leader>go :<C-u>Unite -buffer-name=grep -no-empty grep:.:
 nnoremap <silent> <leader>rr :<C-u>Unite -buffer-name=register register<cr>
 nnoremap <silent> <leader>ss :<C-u>Unite -buffer-name=sessions session<cr>
 nnoremap <silent> <leader>sw :<C-u>UniteSessionSave<cr>:<C-u>echo "Session saved"<cr>
