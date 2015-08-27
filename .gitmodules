@@ -69,3 +69,6 @@
 [submodule "bundle/linediff"]
 	path = bundle/linediff
 	url = https://github.com/AndrewRadev/linediff.vim.git
+[submodule "bundle/colorscheme-gruvbox"]
+	path = bundle/colorscheme-gruvbox
+	url = https://github.com/morhetz/gruvbox.git
