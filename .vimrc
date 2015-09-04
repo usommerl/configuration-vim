@@ -243,6 +243,7 @@ else
    colorscheme lucius
    LuciusDark
 endif
+hi! link ColorColumn CursorLine
 " }}}
 
 " {{{ Statusline
@@ -260,8 +261,9 @@ set statusline+=[%p%%]                           " percentage
 
 " {{{ Autocommands
 au! BufWritePost .vimrc source ~/.vimrc | setlocal foldmethod=marker
-au! Filetype ruby,java,sh,vim,scala let &l:colorcolumn=join(range(81,82),",")
-au  Filetype ruby setlocal regexpengine=1 foldmethod=manual ts=2 sw=2 sts=2 expandtab
+au! Filetype ruby,java,sh,vim,scala let &l:colorcolumn=81
+au  Filetype sh,ruby setlocal ts=2 sw=2 sts=2 expandtab
+au  Filetype ruby setlocal regexpengine=1 foldmethod=manual
 au  Filetype tex,asciidoc,sh setlocal foldmethod=manual
 au! BufReadCmd *.odt,*.ott,*.ods,*.ots,*.odp,*.otp,*.odg,*.otg call zip#Browse(expand("<amatch>"))
 au! BufWinLeave *.* setlocal backupcopy=auto|mkview
