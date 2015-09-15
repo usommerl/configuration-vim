@@ -217,8 +217,9 @@ nnoremap <leader>td :tabclose<cr>
 
 " git
 nnoremap <leader>gd :Gdiff<cr>
-nnoremap <leader>gb :Gitv<cr>
-nnoremap <leader>gf :Gitv!<cr>
+nnoremap <leader>gb :Gblame<cr>
+nnoremap <leader>gvb :Gitv<cr>
+nnoremap <leader>gvf :Gitv!<cr>
 
 " scroll the viewport faster
 nnoremap <C-e> 3<C-e>
