@@ -68,9 +68,9 @@ set relativenumber
 set number
 set laststatus=2
 set expandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set autoindent
 set hlsearch
 set incsearch
@@ -281,7 +281,6 @@ set statusline+=[%p%%]                           " percentage
 " {{{ Autocommands
 au! BufWritePost .vimrc source ~/.vimrc | setlocal foldmethod=marker
 au! Filetype ruby,java,sh,vim,scala let &l:colorcolumn=81
-au  Filetype sh,ruby setlocal ts=2 sw=2 sts=2 expandtab
 au  Filetype ruby setlocal regexpengine=1 foldmethod=manual
 au  Filetype tex,asciidoc,sh setlocal foldmethod=manual
 au! BufReadCmd *.odt,*.ott,*.ods,*.ots,*.odp,*.otp,*.odg,*.otg call zip#Browse(expand("<amatch>"))
