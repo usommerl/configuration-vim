@@ -14,6 +14,15 @@ let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'passive_filetypes': ['scala'] }
 " }}}
 
+" {{{ dbext
+let g:dbext_default_history_size = 200
+let g:dbext_default_buffer_lines = 20
+let dbext_profiles=expand("~/.vim/dbext_profiles.vim")
+if filereadable(dbext_profiles)
+    exe "source " . dbext_profiles
+endif
+" }}}
+
 " {{{ Unite
 if executable('ack')
   let g:unite_source_grep_command = 'ack'

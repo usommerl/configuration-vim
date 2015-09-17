@@ -72,3 +72,7 @@
 [submodule "bundle/colorscheme-gruvbox"]
 	path = bundle/colorscheme-gruvbox
 	url = https://github.com/morhetz/gruvbox.git
+[submodule "bundle/dbext"]
+	path = bundle/dbext
+	url = https://github.com/vim-scripts/dbext.vim.git
+	ignore = untracked

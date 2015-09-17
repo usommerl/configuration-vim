@@ -6,4 +6,5 @@ view/
 undo/
 viminfo
 colorscheme
+dbext_profiles.vim
 .backup.log
