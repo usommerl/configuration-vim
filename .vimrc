@@ -10,8 +10,8 @@ runtime macros/matchit.vim
 
 " {{{ Syntastic
 let g:syntastic_mode_map = { 'mode': 'active',
-                           \ 'active_filetypes': [],
-                           \ 'passive_filetypes': ['scala'] }
+      \ 'active_filetypes': [],
+      \ 'passive_filetypes': ['scala'] }
 " }}}
 
 " {{{ dbext
@@ -19,7 +19,7 @@ let g:dbext_default_history_size = 200
 let g:dbext_default_buffer_lines = 20
 let dbext_profiles=expand("~/.vim/dbext_profiles.vim")
 if filereadable(dbext_profiles)
-    exe "source " . dbext_profiles
+  exe "source " . dbext_profiles
 endif
 " }}}
 
@@ -91,9 +91,9 @@ let g:xml_syntax_folding=1
 
 " {{{ Functions
 function! MyFoldText()
-    let line = getline(v:foldstart)
-    let sub = substitute(line, '.*{\{3}\s*', ' ', 'g')
-    return v:folddashes . sub . ' '
+  let line = getline(v:foldstart)
+  let sub = substitute(line, '.*{\{3}\s*', ' ', 'g')
+  return v:folddashes . sub . ' '
 endfunction
 
 function! GetBufferList()
@@ -112,9 +112,9 @@ function! ToggleList(bufname, pfx)
     endif
   endfor
   if a:pfx == 'l' && len(getloclist(0)) == 0
-      echohl ErrorMsg
-      echo "Location List is Empty."
-      return
+    echohl ErrorMsg
+    echo "Location List is Empty."
+    return
   endif
   let winnr = winnr()
   exec(a:pfx.'open')
@@ -124,9 +124,9 @@ function! ToggleList(bufname, pfx)
 endfunction
 
 function! GitStatus()
-    let l:git_status=substitute(fugitive#statusline(), "Git(", "", "")
-    let l:git_status=substitute(l:git_status, ")", "", "")
-    return l:git_status
+  let l:git_status=substitute(fugitive#statusline(), "Git(", "", "")
+  let l:git_status=substitute(l:git_status, ")", "", "")
+  return l:git_status
 endfunction
 " }}}
 
@@ -255,12 +255,12 @@ nnoremap <silent> <leader>yf :<C-u>let @+ = expand("%:p") <cr>
 " {{{ Colors
 let file=expand("~/.vim/colorscheme")
 if filereadable(file)
-   " read colorscheme setting from external file if it exists
-   exe "source " . file
+  " read colorscheme setting from external file if it exists
+  exe "source " . file
 else
-   " default colorscheme
-   colorscheme lucius
-   LuciusDark
+  " default colorscheme
+  colorscheme lucius
+  LuciusDark
 endif
 hi! link ColorColumn CursorLine
 " }}}
