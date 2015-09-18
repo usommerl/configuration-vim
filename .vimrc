@@ -224,33 +224,32 @@ nnoremap <leader>. :b#<cr>
 nnoremap <leader>tn :tabnew<cr>
 nnoremap <leader>td :tabclose<cr>
 
-" git
-nnoremap <leader>gd :Gdiff<cr>
-nnoremap <leader>gb :Gblame<cr>
-nnoremap <leader>gvb :Gitv<cr>
-nnoremap <leader>gvf :Gitv!<cr>
 
 " scroll the viewport faster
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 
-nnoremap <silent> <leader>o :<C-u>Unite -buffer-name=outline -vertical outline<cr>
-nnoremap <silent> <leader>bb :<C-u>Unite -buffer-name=buffers buffer<cr>
-nnoremap <silent> <leader>br :<C-u>UniteResume buffer<cr>
-nnoremap <silent> <leader>ff :<C-u>Unite -buffer-name=find -no-empty find<cr>
-nnoremap <silent> <leader>fr :<C-u>UniteResume find<cr>
-nnoremap <silent> <leader>gg :<C-u>Unite -buffer-name=grep -no-empty grep<cr>
-nnoremap          <leader>go :<C-u>Unite -buffer-name=grep -no-empty grep:.:
-nnoremap <silent> <leader>gr :<C-u>UniteResume grep<cr>
-nnoremap <silent> <leader>gb :<C-u>Unite -buffer-name=grep -no-empty grep:$buffers<cr>
-nnoremap <silent> <leader>rr :<C-u>Unite -buffer-name=register register<cr>
-nnoremap <silent> <leader>ss :<C-u>Unite -buffer-name=sessions session<cr>
-nnoremap <silent> <leader>sw :<C-u>UniteSessionSave<cr>:<C-u>echo "Session saved"<cr>
-nnoremap <silent> <leader>sn :<C-u>Unite -buffer-name=sessions -start-insert session/new<cr>
-nnoremap <silent> <leader>sc :<C-u>echo v:this_session<cr>
-nnoremap <silent> <leader>yy :<C-u>Unite -buffer-name=yanks history/yank<cr>
-nnoremap <silent> <leader>yd :<C-u>let @+ = expand("%:p:h")<cr>
-nnoremap <silent> <leader>yf :<C-u>let @+ = expand("%:p") <cr>
+nnoremap <silent> <leader>o   :<C-u>Unite -buffer-name=outline -vertical outline<cr>
+nnoremap <silent> <leader>bb  :<C-u>Unite -buffer-name=buffers buffer<cr>
+nnoremap <silent> <leader>br  :<C-u>UniteResume buffer<cr>
+nnoremap <silent> <leader>ff  :<C-u>Unite -buffer-name=find -no-empty find<cr>
+nnoremap <silent> <leader>fr  :<C-u>UniteResume find<cr>
+nnoremap          <leader>gd  :Gdiff<cr>
+nnoremap          <leader>gb  :Gblame<cr>
+nnoremap          <leader>gvb :Gitv<cr>
+nnoremap          <leader>gvf :Gitv!<cr>
+nnoremap <silent> <leader>ggg :<C-u>Unite -buffer-name=grep -no-empty grep<cr>
+nnoremap          <leader>ggo :<C-u>Unite -buffer-name=grep -no-empty grep:.:
+nnoremap <silent> <leader>ggr :<C-u>UniteResume grep<cr>
+nnoremap <silent> <leader>ggb :<C-u>Unite -buffer-name=grep -no-empty grep:$buffers<cr>
+nnoremap <silent> <leader>rr  :<C-u>Unite -buffer-name=register register<cr>
+nnoremap <silent> <leader>ss  :<C-u>Unite -buffer-name=sessions session<cr>
+nnoremap <silent> <leader>sw  :<C-u>UniteSessionSave<cr>:<C-u>echo "Session saved"<cr>
+nnoremap <silent> <leader>sn  :<C-u>Unite -buffer-name=sessions -start-insert session/new<cr>
+nnoremap <silent> <leader>sc  :<C-u>echo v:this_session<cr>
+nnoremap <silent> <leader>yy  :<C-u>Unite -buffer-name=yanks history/yank<cr>
+nnoremap <silent> <leader>yd  :<C-u>let @+ = expand("%:p:h")<cr>
+nnoremap <silent> <leader>yf  :<C-u>let @+ = expand("%:p") <cr>
 " }}}
 
 " {{{ Colors
