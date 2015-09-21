@@ -62,10 +62,6 @@
 [submodule "bundle/unite-session"]
 	path = bundle/unite-session
 	url = https://github.com/Shougo/unite-session.git
-[submodule "bundle/vim-buffkill"]
-	path = bundle/vim-buffkill
-	url = https://github.com/qpkorr/vim-bufkill.git
-	ignore = untracked
 [submodule "bundle/linediff"]
 	path = bundle/linediff
 	url = https://github.com/AndrewRadev/linediff.vim.git
