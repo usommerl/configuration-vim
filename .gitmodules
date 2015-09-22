@@ -72,3 +72,6 @@
 	path = bundle/dbext
 	url = https://github.com/vim-scripts/dbext.vim.git
 	ignore = untracked
+[submodule "bundle/rename"]
+	path = bundle/rename
+	url = https://github.com/danro/rename.vim.git
