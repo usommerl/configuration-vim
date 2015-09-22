@@ -238,6 +238,7 @@ nnoremap <C-y> 3<C-y>
 
 nnoremap <silent> <leader>o   :<C-u>Unite -buffer-name=outline -vertical outline<cr>
 nnoremap <silent> <leader>bb  :<C-u>Unite -buffer-name=buffers buffer<cr>
+nnoremap <silent> <leader>bd  :<C-u>bp\|bd #<cr>
 nnoremap <silent> <leader>br  :<C-u>UniteResume buffer<cr>
 nnoremap <silent> <leader>ff  :<C-u>Unite -buffer-name=find -no-empty find<cr>
 nnoremap <silent> <leader>fr  :<C-u>UniteResume find<cr>
