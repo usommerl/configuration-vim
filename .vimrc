@@ -17,6 +17,7 @@ let g:syntastic_mode_map = { 'mode': 'active',
 " {{{ dbext
 let g:dbext_default_history_size = 200
 let g:dbext_default_buffer_lines = 20
+let g:dbext_default_always_prompt_for_variables = 1
 let dbext_profiles=expand("~/.vim/dbext_profiles.vim")
 if filereadable(dbext_profiles)
   exe "source " . dbext_profiles
