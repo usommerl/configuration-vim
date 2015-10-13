@@ -48,6 +48,7 @@ call unite#custom#source('grep', 'max_candidates', 0)
 " {{{ IndentLine
 let g:indentLine_char = '┊'
 let g:indentLine_noConcealCursor=1
+let g:indentLine_fileTypeExclude = ['text', 'help']
 " }}}
 
 " }}}
