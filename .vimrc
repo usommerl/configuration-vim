@@ -45,6 +45,11 @@ call unite#custom#source('find', 'max_candidates', 0)
 call unite#custom#source('grep', 'max_candidates', 0)
 " }}}
 
+" {{{ IndentLine
+let g:indentLine_char = '┊'
+let g:indentLine_noConcealCursor=1
+" }}}
+
 " }}}
 
 " {{{ General options
