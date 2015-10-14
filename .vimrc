@@ -160,10 +160,6 @@ vnoremap  <Down>   <NOP>
 vnoremap  <Left>   <NOP>
 vnoremap  <Right>  <NOP>
 
-"move curser on display lines not actual lines
-nnoremap j gj
-nnoremap k gk
-
 "map keys to move lines
 noremap <C-j> :m+<cr>==
 noremap <C-k> :m-2<cr>==
