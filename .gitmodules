@@ -59,6 +59,7 @@
 [submodule "bundle/vimproc"]
 	path = bundle/vimproc
 	url = https://github.com/Shougo/vimproc.vim.git
+	ignore = untracked
 [submodule "bundle/unite-session"]
 	path = bundle/unite-session
 	url = https://github.com/Shougo/unite-session.git
