@@ -92,6 +92,7 @@ set dictionary=/usr/share/dict/ngerman,/usr/share/dict/british-english
 set listchars=tab:▸\ ,eol:$,nbsp:%
 set cursorline
 set clipboard=unnamedplus
+set lazyredraw
 
 let g:xml_syntax_folding=1
 " }}}
@@ -285,7 +286,7 @@ set statusline+=[%p%%]                           " percentage
 " {{{ Autocommands
 au! BufWritePost .vimrc source ~/.vimrc | setlocal foldmethod=marker
 au! Filetype ruby,java,sh,vim,scala let &l:colorcolumn=81
-au  Filetype ruby setlocal regexpengine=1 foldmethod=manual
+au  Filetype ruby setlocal regexpengine=1
 au  Filetype tex,asciidoc,sh setlocal foldmethod=manual
 au! BufReadCmd *.odt,*.ott,*.ods,*.ots,*.odp,*.otp,*.odg,*.otg call zip#Browse(expand("<amatch>"))
 au! BufWinLeave *.* setlocal backupcopy=auto|mkview
