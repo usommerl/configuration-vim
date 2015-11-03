@@ -264,9 +264,8 @@ if filereadable(file)
   exe "source " . file
 else
   " default colorscheme
-  set background=dark
-  silent ! source ~/.vim/bundle/colorscheme-gruvbox/gruvbox_256palette.sh
-  colorscheme gruvbox
+  colorscheme lucius
+  LuciusDark
 endif
 hi! link ColorColumn CursorLine
 " }}}
