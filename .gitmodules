@@ -79,3 +79,6 @@
 [submodule "bundle/indentLine"]
 	path = bundle/indentLine
 	url = https://github.com/Yggdroot/indentLine
+[submodule "bundle/fzf"]
+	path = bundle/fzf
+	url = https://github.com/junegunn/fzf
