@@ -224,10 +224,9 @@ nnoremap <leader>. :b#<cr>
 nnoremap <leader>tn :tabnew<cr>
 nnoremap <leader>td :tabclose<cr>
 
-
 " scroll the viewport faster
-nnoremap <C-e> 3<C-e>
-nnoremap <C-y> 3<C-y>
+nnoremap <C-e> 4<C-e>
+nnoremap <C-y> 4<C-y>
 
 nnoremap <silent> <leader>o   :<C-u>Unite -buffer-name=outline -vertical outline<cr>
 nnoremap <silent> <leader>bb  :<C-u>Unite -buffer-name=buffers buffer<cr>
