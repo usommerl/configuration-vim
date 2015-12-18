@@ -25,16 +25,11 @@ endif
 " }}}
 
 " {{{ Unite
-if executable('ack')
-  let g:unite_source_grep_command = 'ack'
-elseif executable('ack-grep')
-  let g:unite_source_grep_command = 'ack-grep'
-endif
-
 let g:unite_source_history_yank_enable = 1
 let g:unite_split_rule = "botright"
+let g:unite_source_grep_command = 'ag'
+let g:unite_source_grep_default_opts = '--nocolor --nogroup --hidden'
 let g:unite_source_grep_recursive_opt = ''
-let g:unite_source_grep_default_opts = '--no-heading --no-color'
 let g:unite_source_session_enable_auto_save = 1
 let g:unite_source_find_default_expr = '-iname '
 
