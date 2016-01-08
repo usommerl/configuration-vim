@@ -28,10 +28,6 @@
 [submodule "bundle/dart-vim-plugin"]
 	path = bundle/dart-vim-plugin
 	url = https://github.com/dart-lang/dart-vim-plugin.git
-[submodule "bundle/align"]
-	path = bundle/align
-	url = https://github.com/vim-scripts/Align.git
-	ignore = untracked
 [submodule "configuration-module-lib"]
 	path = configuration-module-lib
 	url = https://github.com/usommerl/configuration-module-lib.git
@@ -82,3 +78,6 @@
 [submodule "bundle/fzf"]
 	path = bundle/fzf
 	url = https://github.com/junegunn/fzf
+[submodule "bundle/tabular"]
+	path = bundle/tabular
+	url = https://github.com/godlygeek/tabular.git
