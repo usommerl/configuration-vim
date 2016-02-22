@@ -232,8 +232,8 @@ nnoremap <silent> <leader>o   :<C-u>Unite -buffer-name=outline -vertical outline
 nnoremap <silent> <leader>bb  :<C-u>Unite -buffer-name=buffers buffer<cr>
 nnoremap <silent> <leader>bd  :<C-u>bp\|bd #<cr>
 nnoremap <silent> <leader>br  :<C-u>UniteResume buffer<cr>
-nnoremap <silent> <leader>ff  :FZF -m<cr>
-nnoremap <silent> <leader>fe  :FZF -e -m<cr>
+nnoremap <silent> <leader>ff  :FZF -m --bind=space:toggle<cr>
+nnoremap <silent> <leader>fe  :FZF -e -m --bind=space:toggle<cr>
 nnoremap <silent> <leader>fu  :<C-u>Unite -buffer-name=find -no-empty find<cr>
 nnoremap <silent> <leader>fr  :<C-u>UniteResume find<cr>
 nnoremap          <leader>gd  :Gdiff<cr>
