@@ -28,9 +28,6 @@
 [submodule "bundle/dart-vim-plugin"]
 	path = bundle/dart-vim-plugin
 	url = https://github.com/dart-lang/dart-vim-plugin.git
-[submodule "configuration-module-lib"]
-	path = configuration-module-lib
-	url = https://github.com/usommerl/configuration-module-lib.git
 [submodule "bundle/colorscheme-seoul256"]
 	path = bundle/colorscheme-seoul256
 	url = https://github.com/junegunn/seoul256.vim.git
